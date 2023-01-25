@@ -1,11 +1,11 @@
-let input = require("fs")
+const input = require("fs")
   .readFileSync('/dev/stdin')
   .toString()
-  .split(" ");
-var a = parseInt(input[0]);
-var b = parseInt(input[1]);
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(parseInt(a / b));
-console.log(a % b);
+  .split(" ")
+  .map(Number);
+
+console.log(input[0] + input[1]);
+console.log(input[0] - input[1]);
+console.log(input[0] * input[1]);
+console.log(parseInt(input[0] / input[1]));
+console.log(input[0] % input[1]);
