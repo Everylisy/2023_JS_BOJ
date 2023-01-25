@@ -1,10 +1,12 @@
-let input = require("fs")
-  .readFileSync("/dev/stdin")
+const input = require('fs')
+  .readFileSync('/dev/stdin')
   .toString()
-  .split("\n");
-let topNum = input[0];
-let btmNum = input[1];
-console.log(topNum * btmNum[2]);
-console.log(topNum * btmNum[1]);
-console.log(topNum * btmNum[0]);
-console.log(topNum * btmNum);
+  .trim()
+  .split('\n');
+
+const [top, bottom] = [input[0], input[1]];
+bottom
+  .split('')
+  .reverse()
+  .map((val) => console.log(top * val));
+console.log(top * bottom);
