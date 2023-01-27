@@ -9,7 +9,6 @@ function solution(array) {
     });
 
     const arr = Object.entries(obj).sort((a, b) => b[1] - a[1]);
-    console.log(arr);
     if (arr.length > 1 && arr[0][1] === arr[1][1]) return -1;
     return +arr[0][0];
 }
