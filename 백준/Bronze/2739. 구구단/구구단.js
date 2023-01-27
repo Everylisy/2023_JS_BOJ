@@ -1,8 +1,3 @@
-const input = require("fs")
-  .readFileSync("/dev/stdin")
-  .toString();
-let Num = parseInt(input[0]);
+const N = +require('fs').readFileSync('/dev/stdin');
 
-for (let i = 1; i < 10; i++) {
-  console.log(`${Num} * ${i} = ${Num * i}`);
-}
+for (let i = 1; 9 >= i; i++) console.log(`${N} * ${i} = ${N * i}`);
