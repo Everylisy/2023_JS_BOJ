@@ -8,7 +8,6 @@ function factorial(num) {
 
 function solution(n) {
     let answer = 0;
-    if (n === 3628800) return 10;
     for (let i = 1; 10 >= i; i++) {
         if(n >= factorial(i)) answer = i;
     }
