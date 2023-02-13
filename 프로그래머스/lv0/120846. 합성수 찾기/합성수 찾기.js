@@ -1,4 +1,4 @@
-function checkPrime(num) {
+function checkComp(num) {
     for (let i = 2; num > i; i++) {
         if(num % i === 0) return true;
     }
@@ -6,10 +6,10 @@ function checkPrime(num) {
 }
 
 function solution(n) {
-    let primeCnt = 0;
+    let compCnt = 0;
 
     for (let i = 1; n >= i; i++) {
-        if (checkPrime(i)) primeCnt++;
+        if (checkComp(i)) compCnt++;
     }
-    return primeCnt;
+    return compCnt;
 }
