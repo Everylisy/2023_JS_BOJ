@@ -1,8 +1,4 @@
 function solution(my_string) {
-    const regex = /[^0-9]/g;
-    const arr = my_string.replace(regex, ' ')
-                            .split(' ')
-                            .map(Number)
-                            .filter(el => !isNaN(el));
+    const arr = my_string.split(/[^0-9]/g).map(Number);
     return arr.reduce((acc, cur) => acc + cur);
 }
