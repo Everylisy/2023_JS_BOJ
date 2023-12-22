@@ -1,3 +1,4 @@
 function solution(arr) {
-    return arr.join('');
+    const answer = arr.join('');
+    return answer;
 }
