@@ -1,9 +1,15 @@
 function solution(a, b, c) {
-  const scoreOne = a + b + c;
-  const scoreTwo = a ** 2 + b ** 2 + c ** 2;
-  const scoreThree = a ** 3 + b ** 3 + c ** 3;
-
-  if (a === b && b === c) return scoreOne * scoreTwo * scoreThree; 
-  if (a === b || b === c || a === c) return scoreOne * scoreTwo;
-  return scoreOne;
+    const score = {
+        onePoint: a + b + c,
+        twoPoint: a ** 2 + b ** 2 + c ** 2,
+        threePoint: a ** 3 + b ** 3 + c ** 3,
+    }
+    const {onePoint, twoPoint, threePoint} = score;
+    
+    if (a === b && b === c) {
+        return onePoint * twoPoint * threePoint;
+    } else if (a === b || a === c || b === c) {
+        return onePoint * twoPoint;
+    }
+    return onePoint;
 }
